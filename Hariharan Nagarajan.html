@@ -1,0 +1,583 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Hariharan Nagarajan is a technical product owner and senior business analyst with 20+ years of experience in retail banking and modernization."><title>Hariharan Nagarajan | Technical Product Owner</title><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout concept: dark navy ledger. A hero with portrait, a three-node flow strip
+     (digital channel -> API layer -> mainframe) as the signature detail, then
+     two-column sections with the heading on the left and the content on the right. */
+  :root {
+    --bg: #0E1626;
+    --surface: #152039;
+    --surface-2: #1C2B4A;
+    --line: #2B3C60;
+    --fg: #E8ECF4;
+    --muted: #9CA9C2;
+    --accent: #E2A84B;
+    --accent-ink: #1A1304;
+    --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #F4F6FA;
+      --surface: #FFFFFF;
+      --surface-2: #E9EDF5;
+      --line: #D2D9E8;
+      --fg: #0F1A2E;
+      --muted: #55627D;
+      --accent: #94590A;
+      --accent-ink: #FFFFFF;
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F4F6FA;
+    --surface: #FFFFFF;
+    --surface-2: #E9EDF5;
+    --line: #D2D9E8;
+    --fg: #0F1A2E;
+    --muted: #55627D;
+    --accent: #94590A;
+    --accent-ink: #FFFFFF;
+    color-scheme: light;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.1; }
+  p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  .mono { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+  /* Top bar */
+  .topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+  .mark { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; color: var(--fg); text-decoration: none; }
+  .mark span { color: var(--accent); }
+  .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 0.92rem; padding-block: 4px; }
+  .nav a:hover { color: var(--fg); }
+  .toggle { font: inherit; font-size: 0.82rem; color: var(--fg); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+  .toggle:hover { border-color: var(--accent); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: center; padding-block: 64px 40px; }
+  .hero-text { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+  .hero h1 { font-size: clamp(2.5rem, 7vw, 4.75rem); font-weight: 700; letter-spacing: -0.03em; }
+  .hero .lead { font-size: clamp(1.05rem, 2vw, 1.2rem); max-width: 56ch; color: var(--fg); }
+  .hero .where { color: var(--muted); font-size: 0.95rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+  .btn { display: inline-block; font-weight: 500; font-size: 0.95rem; text-decoration: none; padding: 10px 20px; border-radius: 4px; border: 1px solid var(--accent); }
+  .btn-solid { background: var(--accent); color: var(--accent-ink); }
+  .btn-solid:hover { filter: brightness(1.08); }
+  .btn-line { color: var(--accent); background: transparent; }
+  .btn-line:hover { background: var(--surface-2); }
+  .portrait { margin: 0; display: flex; flex-direction: column; gap: 10px; width: 210px; max-width: 100%; }
+  .portrait img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); }
+
+  /* Flow strip */
+  .flow-block { padding-block: 8px 24px; }
+  .flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: 12px; align-items: stretch; }
+  .node { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .node h3 { font-size: 1.1rem; font-weight: 600; }
+  .node p { color: var(--muted); font-size: 0.9rem; }
+  .arrow { align-self: center; font-family: var(--font-mono); color: var(--accent); font-size: 1.2rem; }
+  .flow-note { margin-top: 12px; color: var(--muted); font-size: 0.88rem; max-width: 70ch; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; margin: 0; padding-block: 32px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .stat dt { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 5vw, 2.75rem); letter-spacing: -0.02em; color: var(--accent); line-height: 1; order: 1; }
+  .stat dd { margin: 0; color: var(--muted); font-size: 0.88rem; order: 2; }
+
+  /* Sections */
+  .section { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px 48px; padding-block: 64px; border-bottom: 1px solid var(--line); }
+  .section > h2 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.015em; }
+  .section-body { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+  .prose { max-width: 65ch; display: flex; flex-direction: column; gap: 16px; }
+
+  .banks { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--fg); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; background: transparent; }
+
+  /* Experience */
+  .jobs { display: flex; flex-direction: column; gap: 40px; }
+  .job { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 12px 32px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .job:first-child { border-top: 0; padding-top: 0; }
+  .job-meta { display: flex; flex-direction: column; gap: 4px; }
+  .job-meta .when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); }
+  .job-meta .loc { color: var(--muted); font-size: 0.88rem; }
+  .job-main { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .job-main h3 { font-size: 1.3rem; font-weight: 600; letter-spacing: -0.01em; }
+  .job-main .org { color: var(--muted); font-size: 0.95rem; }
+  .bullets { display: flex; flex-direction: column; gap: 8px; }
+  .bullets li { position: relative; padding-left: 18px; max-width: 70ch; }
+  .bullets li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 1px; background: var(--accent); }
+  .win { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; max-width: 70ch; }
+  .win .mono { color: var(--accent); }
+
+  /* Work list */
+  .work { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .work li { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .work h3 { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.005em; line-height: 1.25; }
+  .work p { color: var(--muted); font-size: 0.88rem; }
+  .work .mono { color: var(--accent); }
+
+  /* Skills */
+  .skillgroup { display: flex; flex-direction: column; gap: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: 0.88rem; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+  .chip-mono { font-family: var(--font-mono); font-size: 0.82rem; }
+
+  /* Sites */
+  .sites { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .site { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; text-decoration: none; color: var(--fg); min-width: 0; }
+  .site:hover { border-color: var(--accent); }
+  .site h3 { font-size: 1.02rem; font-weight: 600; }
+  .site .host { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); overflow-wrap: anywhere; }
+
+  /* Credentials */
+  .creds { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 32px; }
+  .creds li { padding-block: 10px; border-bottom: 1px solid var(--line); }
+  .edu { display: flex; flex-direction: column; gap: 2px; }
+  .edu strong { font-weight: 600; }
+  .edu span { color: var(--muted); }
+
+  /* Contact */
+  .contact-list { display: flex; flex-direction: column; }
+  .contact-row { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding-block: 14px; border-bottom: 1px solid var(--line); }
+  .contact-row:first-child { border-top: 1px solid var(--line); }
+  .contact-row .val { overflow-wrap: anywhere; user-select: all; }
+  .copy { font: inherit; font-size: 0.82rem; color: var(--accent); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 4px 12px; cursor: pointer; }
+  .copy:hover { border-color: var(--accent); }
+  .status { min-height: 1.2em; color: var(--muted); font-size: 0.85rem; }
+
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 32px 48px; color: var(--muted); font-size: 0.85rem; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 40px 24px; }
+    .portrait { order: -1; width: 150px; }
+    .section { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-block: 48px; }
+    .job { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .job-meta { flex-direction: row; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+  }
+  @media (max-width: 720px) {
+    .flow { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    .arrow { justify-self: start; padding-left: 18px; transform: rotate(90deg); transform-origin: center; }
+    .contact-row { grid-template-columns: minmax(0, 1fr) auto; }
+    .contact-row .mono { grid-column: 1 / -1; }
+  }
+</style>
+ </head><body>
+
+<div class="wrap">
+  <header class="topbar">
+    <a class="mark" href="#top">Hariharan<span>.</span>N</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#building">AI &amp; builds</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">Theme</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="name">
+      <div class="hero-text">
+        <p class="mono">Technical Product Owner · Senior Business Analyst · AVP</p>
+        <h1 id="name">Hariharan Nagarajan</h1>
+        <p class="lead">I own product vision, backlogs and delivery for large-scale retail banking, debit card, deposits, authorization and regulatory modernization platforms. 20+ years, from COBOL and Hogan on the mainframe to REST APIs and digital cards.</p>
+        <p class="where">Chennai, India. Working with teams across India and the US.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#experience">See experience</a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+          <a class="btn btn-line" href="Hariharan%20Nagarajan%20Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="data:image/jpeg;base64,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" width="153" height="190" alt="Portrait of Hariharan Nagarajan">
+        <figcaption class="mono">Chennai · IST</figcaption>
+      </figure>
+    </section>
+
+    <div class="flow-block">
+      <div class="flow" role="img" aria-label="Flow from the digital debit card, through z/OS Connect REST APIs, to the Hogan mainframe platform">
+        <div class="node">
+          <span class="mono">Channel</span>
+          <h3>Digital debit card</h3>
+          <p>Customer-facing initiative at Bank of America</p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="node">
+          <span class="mono">API layer</span>
+          <h3>z/OS Connect</h3>
+          <p>REST APIs exposed over mainframe services</p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="node">
+          <span class="mono">System of record</span>
+          <h3>Hogan on z/OS</h3>
+          <p>Debit cards, deposits, authorization</p>
+        </div>
+      </div>
+      <p class="flow-note">The bridge I led at Bank of America: REST API connections in front of the legacy Hogan-based debit card and retail banking systems.</p>
+    </div>
+
+    <dl class="stats">
+      <div class="stat"><dt>20+</dt><dd>years in banking technology and product ownership</dd></div>
+      <div class="stat"><dt>~300</dt><dd>FTEs set up and resourced for the Bank of America Continuum GCC in Chennai, as part of the TCS team</dd></div>
+      <div class="stat"><dt>$2M</dt><dd>savings from MIPS optimization, digital debit card and debit card validity extension</dd></div>
+      <div class="stat"><dt>~$1M</dt><dd>savings from FTE reduction in the IO consent order program at Citi</dd></div>
+    </dl>
+
+    <section class="section" id="about" aria-labelledby="h-about">
+      <h2 id="h-about">About</h2>
+      <div class="section-body">
+        <div class="prose">
+          <p>I am a Technical Product Owner with 20+ years of experience across Retail Banking, Debit Card, Deposits, Authorization and regulatory modernization platforms. I currently lead a team of 20.</p>
+          <p>My technical depth in Hogan and mainframe platforms lets me work credibly with architects, engineers and QA on solution design and trade-offs. I managed the team that implemented REST API integration through z/OS Connect, including the digital debit card initiative on Bank of America's debit card systems, along with authorization and transaction flows, and data conversion and migration.</p>
+          <p>I have been a trusted product partner to Tier-1 financial institutions, and I know US payments, retail banking and debit card domains well.</p>
+        </div>
+        <div class="banks" aria-label="Institutions worked with">
+          <span class="tag">Citibank NA</span>
+          <span class="tag">Bank of America</span>
+          <span class="tag">Royal Bank of Scotland</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="h-exp">
+      <h2 id="h-exp">Experience</h2>
+      <div class="jobs">
+        <article class="job">
+          <div class="job-meta">
+            <span class="when">Jan 2022 – Present</span>
+            <span class="loc">Chennai, India</span>
+          </div>
+          <div class="job-main">
+            <h3>Assistant Vice President, Technical Product Owner / Senior Business Analyst</h3>
+            <p class="org">Citicorp Services Pvt Ltd</p>
+            <ul class="bullets">
+              <li>Led product ownership and business analysis for North America Retail Banking modernization and regulatory compliance programs, including the IO consent order, which saved approximately $1 million through FTE reduction.</li>
+              <li>Owned the product backlog, epics, technical user stories, grooming sessions and acceptance criteria in Agile/Scrum, working closely with engineering on solution design.</li>
+              <li>Partnered with Product, Technology, Operations, Risk and Compliance stakeholders across US-based teams to align delivery priorities.</li>
+              <li>Drove UAT strategy, defect triage, production readiness and release certification for critical banking systems.</li>
+              <li>Managed and mentored a 10-member global team across TPS, TTR, ALS, PSE and IMPACS systems.</li>
+              <li>Used Jira, Confluence, Microsoft Visio and HP Quality Center for delivery governance.</li>
+            </ul>
+            <div class="win">
+              <span class="mono">Key achievement</span>
+              <p>Recognized by US stakeholders for on-time delivery, quality execution and proactive risk management.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-meta">
+            <span class="when">Jun 2015 – Jan 2022</span>
+            <span class="loc">Chennai, India and Charlotte, NC, USA</span>
+          </div>
+          <div class="job-main">
+            <h3>Assistant Vice President / Senior Delivery Lead</h3>
+            <p class="org">Bank of America</p>
+            <ul class="bullets">
+              <li>Delivered Wealth Management, Retirement Planning, Debit Cards, Authorization and Check Exception systems.</li>
+              <li>Served as Product Lead, Onshore Project Lead, Conversion Lead and Production Support Lead across multiple engagements.</li>
+              <li>Led Hogan-based Debit Card platforms, including setup, maintenance and REST API integrations through z/OS Connect.</li>
+              <li>Directed large-scale data conversions, system modernization and regulatory compliance initiatives.</li>
+              <li>Acted as primary liaison between business, technology and executive stakeholders across geographies.</li>
+            </ul>
+            <div class="win">
+              <span class="mono">Key achievement</span>
+              <p>Delivered complex banking programs with measurable operational impact. Initiatives such as MIPS optimization, the digital debit card and debit card validity extension saved up to $2 million.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-meta">
+            <span class="when">Oct 2005 – Apr 2015</span>
+            <span class="loc">Chennai, India and Charlotte, NC, USA</span>
+          </div>
+          <div class="job-main">
+            <h3>Mainframe Development &amp; Support Lead</h3>
+            <p class="org">Tata Consultancy Services Limited</p>
+            <ul class="bullets">
+              <li>Led UZ-Mplex Account Database and Customer Data Management modernization initiatives.</li>
+              <li>Managed a 15-member offshore team delivering data quality and consolidation solutions for banking clients.</li>
+              <li>Part of the TCS team that set up and resourced almost 300 FTEs for the Bank of America Continuum Global Capability Centre in Chennai.</li>
+            </ul>
+            <div class="win">
+              <span class="mono">Key achievement</span>
+              <p>Consistently rated a high performer, with recognition for technical leadership and team delivery excellence.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="h-work">
+      <h2 id="h-work">Selected work</h2>
+      <ul class="work">
+        <li>
+          <span class="mono">Citibank</span>
+          <h3>Input-Output Consent Order GL Automation</h3>
+          <p>Automated trillion-dollar GL posting within Citibank's TTR application.</p>
+        </li>
+        <li>
+          <span class="mono">Citibank NA</span>
+          <h3>North America Retail Banking Modernization</h3>
+          <p>Modernization across TPS, TTR, ALS, PSE and IMPACS.</p>
+        </li>
+        <li>
+          <span class="mono">Bank of America</span>
+          <h3>Debit Card Platform Setup, Maintenance &amp; REST API Integration</h3>
+          <p>Platform setup and support, with REST APIs through z/OS Connect.</p>
+        </li>
+        <li>
+          <span class="mono">Bank of America</span>
+          <h3>Hogan-Based Debit Card &amp; Authorization Systems</h3>
+          <p>Debit card and authorization platforms on Hogan.</p>
+        </li>
+        <li>
+          <span class="mono">Bank of America</span>
+          <h3>Regulatory Compliance Programs</h3>
+          <p>Data conversion and migration for regulatory compliance.</p>
+        </li>
+        <li>
+          <span class="mono">Bank of America</span>
+          <h3>Wealth Management &amp; Retirement Planning Systems</h3>
+          <p>Delivery of wealth and retirement planning platforms.</p>
+        </li>
+        <li>
+          <span class="mono">Bank of America</span>
+          <h3>Check Exception Processing Systems</h3>
+          <p>Delivery of check exception processing.</p>
+        </li>
+        <li>
+          <span class="mono">TCS</span>
+          <h3>UZ-Mplex Account Database &amp; Customer Data Management</h3>
+          <p>Modernization with a 15-member offshore team.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills</h2>
+      <div class="section-body">
+        <div class="skillgroup">
+          <span class="mono">Product and delivery</span>
+          <div class="chips">
+            <span class="chip">Technical Product Ownership &amp; Analysis</span>
+            <span class="chip">Agile / Scrum Delivery</span>
+            <span class="chip">Retail Banking (North America)</span>
+            <span class="chip">Debit Cards &amp; Deposits</span>
+            <span class="chip">Regulatory Compliance</span>
+            <span class="chip">Data Conversion &amp; Migration</span>
+            <span class="chip">API &amp; Integration Design</span>
+            <span class="chip">Stakeholder Management</span>
+            <span class="chip">UAT &amp; Production Release</span>
+            <span class="chip">Risk, Controls &amp; Audit Readiness</span>
+            <span class="chip">Global Team Leadership</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <span class="mono">Mainframe</span>
+          <div class="chips">
+            <span class="chip chip-mono">COBOL</span>
+            <span class="chip chip-mono">HOGAN</span>
+            <span class="chip chip-mono">JCL</span>
+            <span class="chip chip-mono">EASYTRIEVE</span>
+            <span class="chip chip-mono">IMS/DB</span>
+            <span class="chip chip-mono">GSAM</span>
+            <span class="chip chip-mono">DB2</span>
+            <span class="chip chip-mono">VSAM</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <span class="mono">Integration and APIs</span>
+          <div class="chips">
+            <span class="chip chip-mono">z/OS Connect (REST API)</span>
+            <span class="chip chip-mono">Nexus</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <span class="mono">Project and DevOps tools</span>
+          <div class="chips">
+            <span class="chip chip-mono">Jira</span>
+            <span class="chip chip-mono">Confluence</span>
+            <span class="chip chip-mono">MS Visio</span>
+            <span class="chip chip-mono">File-Aid</span>
+            <span class="chip chip-mono">ChangeMan</span>
+            <span class="chip chip-mono">SAR</span>
+            <span class="chip chip-mono">Endeavor</span>
+            <span class="chip chip-mono">CA7 Scheduler</span>
+          </div>
+        </div>
+        <div class="skillgroup">
+          <span class="mono">Working style</span>
+          <div class="chips">
+            <span class="chip">Leadership &amp; Team Building</span>
+            <span class="chip">Strategic Thinking &amp; Decision Making</span>
+            <span class="chip">Stakeholder Influence</span>
+            <span class="chip">Executive Communication</span>
+            <span class="chip">Delegation &amp; Ownership</span>
+            <span class="chip">Self-Organized</span>
+            <span class="chip">Prioritization &amp; Delivery Management</span>
+            <span class="chip">Problem Solving &amp; Conflict Resolution</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="building" aria-labelledby="h-build">
+      <h2 id="h-build">AI and personal builds</h2>
+      <div class="section-body">
+        <div class="prose">
+          <p>Outside core banking, I teach myself modern web development and build static websites as hands-on projects. I work in Antigravity, VS Code and Cursor with models from Claude, Grok, Gemini and ChatGPT, and I have used Devin and Workspace AI tools for process improvements.</p>
+        </div>
+        <div class="sites">
+          <a class="site" href="https://hindutemple-beige.vercel.app/" target="_blank" rel="noopener">
+            <h3>Hindu Temple</h3>
+            <span class="host">hindutemple-beige.vercel.app</span>
+          </a>
+          <a class="site" href="https://atsresumedoctor.netlify.app/" target="_blank" rel="noopener">
+            <h3>ATS Resume Doctor</h3>
+            <span class="host">atsresumedoctor.netlify.app</span>
+          </a>
+          <a class="site" href="https://kk-tours-and-travels.netlify.app/" target="_blank" rel="noopener">
+            <h3>KK Tours and Travels</h3>
+            <span class="host">kk-tours-and-travels.netlify.app</span>
+          </a>
+          <a class="site" href="https://drniranjankarthik.netlify.app/" target="_blank" rel="noopener">
+            <h3>Dr. Niranjan Karthik</h3>
+            <span class="host">drniranjankarthik.netlify.app</span>
+          </a>
+        </div>
+        <p><a href="https://github.com/HARAR8B1" target="_blank" rel="noopener">More on GitHub: HARAR8B1</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="credentials" aria-labelledby="h-cred">
+      <h2 id="h-cred">Credentials</h2>
+      <div class="section-body">
+        <ul class="creds">
+          <li>Certified Scrum Product Owner (CSPO)</li>
+          <li>Certified Scrum Master (CSM)</li>
+          <li>ITIL® 2011 Foundation</li>
+          <li>NCFM, Financial Markets</li>
+          <li>FTC, US Banking Competency</li>
+          <li>FTC, Payment Cards</li>
+        </ul>
+        <div class="edu">
+          <span class="mono">Education</span>
+          <strong>Bachelor of Engineering, Electrical &amp; Electronics</strong>
+          <span>Anna University</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <div class="section-body">
+        <div class="prose">
+          <p>Based in Chennai, India. For product ownership, banking modernization or delivery conversations, reach out by email or phone.</p>
+        </div>
+        <div class="contact-list">
+          <div class="contact-row">
+            <span class="mono">Email</span>
+            <span class="val" id="v-email">hariharannelect@gmail.com</span>
+            <button class="copy" type="button" data-target="v-email">Copy</button>
+          </div>
+          <div class="contact-row">
+            <span class="mono">Mobile</span>
+            <span class="val" id="v-m1">+91 95000 46807</span>
+            <button class="copy" type="button" data-target="v-m1">Copy</button>
+          </div>
+          <div class="contact-row">
+            <span class="mono">Mobile</span>
+            <span class="val" id="v-m2">+91 76678 88118</span>
+            <button class="copy" type="button" data-target="v-m2">Copy</button>
+          </div>
+          <div class="contact-row">
+            <span class="mono">LinkedIn</span>
+            <span class="val" id="v-li">hariharan-nagarajan-ch</span>
+            <button class="copy" type="button" data-target="v-li">Copy</button>
+          </div>
+          <div class="contact-row">
+            <span class="mono">GitHub</span>
+            <a class="val" href="https://github.com/HARAR8B1" target="_blank" rel="noopener">github.com/HARAR8B1</a>
+            <span></span>
+          </div>
+        </div>
+        <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Hariharan Nagarajan</span>
+    <span>Chennai, India</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+
+    var toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      if (!current) {
+        current = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    });
+
+    var status = document.getElementById('copy-status');
+    function fallbackSelect(el) {
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    document.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var el = document.getElementById(btn.getAttribute('data-target'));
+        var text = el.textContent.trim();
+        var done = function () { status.textContent = 'Copied ' + text; };
+        var fail = function () { fallbackSelect(el); status.textContent = 'Selected. Press Ctrl+C or Cmd+C to copy.'; };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fail);
+        } else {
+          fail();
+        }
+      });
+    });
+  })();
+</script>
+
+</body></html>
